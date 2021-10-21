@@ -35,4 +35,5 @@ exports.updateCategory = (req,res) =>{
 exports.deleteCategory = (req, res) => {
     Categories.destroy({where: {id: req.params.id}})
         .then(data => res.status(200).send({message: "Category Deleted"}))
+        .catch(error => res.status(500).send(error.message))
 }
