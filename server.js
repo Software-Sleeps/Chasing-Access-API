@@ -7,11 +7,14 @@ const app = express();
 const cors = require("cors");
 const morgan = require("morgan");
 
+const CategoriesRoute = require('./routes/Categories.routes')
 
 //middleware
 app.use(express.json());
 app.use(cors());
 app.use(morgan("tiny"));
+
+app.use('/category', CategoriesRoute)
 
 app.get("/", (req, res) => {
     res.send("Welcome To Chasing Access API");
