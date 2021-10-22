@@ -9,6 +9,7 @@ const morgan = require("morgan");
 
 const CategoriesRoute = require("./routes/Categories.routes");
 const UserRoute = require("./routes/User.routes");
+const PostsRoute = require('./routes/Posts.routes')
 
 //middleware
 app.use(express.json());
@@ -17,6 +18,8 @@ app.use(morgan("tiny"));
 
 app.use("/category", CategoriesRoute);
 app.use("/user", UserRoute);
+app.use("/posts", PostsRoute);
+
 
 app.get("/", (req, res) => {
   res.send("Welcome To Chasing Access API");
