@@ -19,10 +19,10 @@ module.exports = (sequelize, DataTypes) => {
   Posts.init({
     title: {type: DataTypes.STRING, allowNull: false},
     message: DataTypes.STRING,
-    isAuditory: {type: DataTypes.BOOLEAN, default: false},
-    isVision: {type: DataTypes.BOOLEAN, default: false},
-    isMobility: {type: DataTypes.BOOLEAN, default: false},
-    isNeurological: {type: DataTypes.BOOLEAN, default: false},
+    isAuditory: {type: DataTypes.BOOLEAN, defaultValue: false},
+    isVision: {type: DataTypes.BOOLEAN, defaultValue: false},
+    isMobility: {type: DataTypes.BOOLEAN, defaultValue: false},
+    isNeurological: {type: DataTypes.BOOLEAN, defaultValue: false},
     username: {
       type: DataTypes.STRING,
       references: {
