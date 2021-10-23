@@ -1,4 +1,5 @@
-const Posts = require('../db/models/posts')
+const db = require('../db/models')
+const Posts = db.Posts
 const jwt = require("jsonwebtoken");
 const {SECRET} = process.env;
 const { Op } = require("sequelize");
