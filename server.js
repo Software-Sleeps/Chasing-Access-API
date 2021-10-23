@@ -10,7 +10,7 @@ const morgan = require("morgan");
 const CategoriesRoute = require("./routes/Categories.routes");
 const UserRoute = require("./routes/User.routes");
 const PostsRoute = require('./routes/Posts.routes')
-
+const CommentsRoute = require('./routes/Comments.routes')
 //middleware
 app.use(express.json());
 app.use(cors());
@@ -19,6 +19,7 @@ app.use(morgan("tiny"));
 app.use("/category", CategoriesRoute);
 app.use("/user", UserRoute);
 app.use("/posts", PostsRoute);
+app.use('/comments', CommentsRoute)
 
 
 app.get("/", (req, res) => {
