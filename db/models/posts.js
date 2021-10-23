@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Posts.init({
-    title: {type: DataTypes.STRING, required: true},
+    title: {type: DataTypes.STRING, allowNull: false},
     message: DataTypes.STRING,
     isAuditory: {type: DataTypes.BOOLEAN, default: false},
     isVision: {type: DataTypes.BOOLEAN, default: false},

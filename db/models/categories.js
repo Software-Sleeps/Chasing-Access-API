@@ -17,8 +17,8 @@ module.exports = (sequelize, DataTypes) => {
   Categories.init({
     category: {
       type: DataTypes.STRING,
-      unique: true,
-      required: true
+      allowNull: false,
+      unique: true
     }
   },  {
     sequelize,

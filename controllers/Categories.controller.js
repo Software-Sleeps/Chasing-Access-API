@@ -1,5 +1,6 @@
-const Categories = require('../db/models/categories')
-const {where} = require("sequelize");
+const db = require('../db/models/')
+const Categories = db.Categories
+const { where } = require("sequelize");
 
 //GET ALL CATEGORIES
 exports.getAllCategories = (req, res) =>{
@@ -10,7 +11,11 @@ exports.getAllCategories = (req, res) =>{
                 data
             })
         })
-        .catch(error => res.status(500).send(error.message))
+        .catch(error => {
+            console.log(Categories)
+            console.log(db[db.models])
+            res.status(500).send(error.message)
+        })
 }
 
 //Create Category
