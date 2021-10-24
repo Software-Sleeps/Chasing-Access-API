@@ -1,11 +1,12 @@
 const db = require('../db/models')
 const Comments = db.Comments
+const Posts = db.Posts
 const jwt = require("jsonwebtoken");
 const {SECRET} = process.env;
 const {Op} = require("sequelize");
 
 exports.getCommentsByPost = (req, res) => {
-    Comments.findAll({where: {postId: req.params.postId}})//, order: ['createdAt', 'ASC']})
+    Comments.findAll({where: {postId: req.params.postId}, include: {model: Posts, required: true} })//, order: ['createdAt', 'ASC']})
         .then(data => res.status(200).send({
             message: "All Posts for This Category",
             data
