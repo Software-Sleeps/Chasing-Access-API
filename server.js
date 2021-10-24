@@ -21,10 +21,10 @@ app.use("/user", UserRoute);
 app.use("/posts", PostsRoute);
 app.use('/comments', CommentsRoute)
 
-
 app.get("/", (req, res) => {
-  res.send("Welcome To Chasing Access API");
+  res.send("Welcome To Chasing Access API!");
 });
+
 
 //listener when server is running
 app.listen(PORT, () => {
