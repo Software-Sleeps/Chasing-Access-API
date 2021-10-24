@@ -11,13 +11,43 @@ module.exports = {
          *   isBetaMember: false
          * }], {});
          */
-        return queryInterface.bulkInsert('Users', [{
-            email: 'jane-smith@gmail.com',
-            username: 'jsmith',
-            password: '123456',
-            createdAt: new Date(),
-            updatedAt: new Date()
-        }], {});
+        return queryInterface.bulkInsert('Users', [
+            {
+                email: 'jane-smith@gmail.com',
+                username: 'jsmith',
+                password: '123456',
+                createdAt: new Date(),
+                updatedAt: new Date()
+            },
+            {
+                email: 'dl@gmail.com',
+                username: 'dlo',
+                password: 'password1',
+                createdAt: new Date(),
+                updatedAt: new Date()
+            },
+            {
+                email: 'example1@gmail.com',
+                username: 'example1',
+                password: 'example1',
+                createdAt: new Date(),
+                updatedAt: new Date()
+            },
+            {
+                email: 'sel@gmail.com',
+                username: 'sel',
+                password: 'sel',
+                createdAt: new Date(),
+                updatedAt: new Date()
+            },
+            {
+                email: 'lina@gmail.com',
+                username: 'lina',
+                password: 'lina',
+                createdAt: new Date(),
+                updatedAt: new Date()
+            }
+        ], {});
     },
 
     down: async (queryInterface, Sequelize) => {

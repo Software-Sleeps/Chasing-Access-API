@@ -16,7 +16,7 @@ exports.getCommentsByPost = (req, res) => {
 exports.getCommentById = (req, res) => {
     Comments.findOne({
         where: {
-            [Op.and]: [{categoryId: req.params.postId}, {id: req.params.id}]
+            [Op.and]: [{postId: req.params.postId}, {id: req.params.id}]
         }
     })
         .then(data => {
