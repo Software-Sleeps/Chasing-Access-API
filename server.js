@@ -1,6 +1,6 @@
 //read .env file
 require("dotenv").config();
-const { PORT } = process.env;
+const PORT = 3000;
 
 const express = require("express");
 const app = express();
@@ -21,10 +21,10 @@ app.use("/user", UserRoute);
 app.use("/posts", PostsRoute);
 app.use('/comments', CommentsRoute)
 
-
 app.get("/", (req, res) => {
-  res.send("Welcome To Chasing Access API");
+  res.send("Welcome To Chasing Access API!");
 });
+
 
 //listener when server is running
 app.listen(PORT, () => {

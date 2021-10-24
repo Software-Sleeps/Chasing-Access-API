@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "pythoniselite",
+    "username": "ba1eba6766285c",
+    "password": "830a9f09",
     "database": "Chasing-Access",
-    "host": "127.0.0.1",
+    "host": "us-cdbr-east-04.cleardb.com/heroku_ee1450195d298bd?reconnect=true",
     "dialect": "mysql"
   },
   "test": {
@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "pythoniselite",
+    "username": "ba1eba6766285c",
+    "password": "830a9f09",
     "database": "Chasing-Access",
-    "host": "127.0.0.1",
+    "host": "us-cdbr-east-04.cleardb.com/heroku_ee1450195d298bd?reconnect=true",
     "dialect": "mysql"
   }
 }
